@@ -1,0 +1,11 @@
+-------->> Transactions make blockchain cryptocurrency <<------------
+
+
+//function
+
+def add_transactions(self, sender,receiver,amount):
+        self.transactions.append({'sender':sender,
+                                  'reciever':receiver,
+                                  'amount':amount})
+        pre_block = self.get_previous_block()
+        return pre_block['index'] + 1
